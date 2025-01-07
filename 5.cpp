@@ -3,7 +3,7 @@
 
 
 void inputArr(int *size,int *arr);
-void add(int *valuNumber, int *indexNumber, int *arr);
+void fixArr(int *valuNumber, int *indexNumber, int *arr);
 
 
 int main(){
@@ -21,7 +21,7 @@ int main(){
 	printf("nhap gia tri can cap nhat= ");
 	scanf("%d",&valuNumber);
 	
-	add(&valuNumber,&indexNumber,arr);
+	fixArr(&valuNumber,&indexNumber,arr);
 	
 	for(int i = 0; i < n; i++){
 		printf("arr[%d]= %d\n",i,*(arr + i));
@@ -39,7 +39,7 @@ void inputArr(int *size,int *arr){
 };
 
 
-void add(int *valuNumber, int *indexNumber, int *arr){
+void fixArr(int *valuNumber, int *indexNumber, int *arr){
 	int i = *indexNumber;
 	*(arr+(*indexNumber))= *valuNumber;
 
